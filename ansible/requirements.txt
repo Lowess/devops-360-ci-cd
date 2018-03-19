@@ -1,4 +1,3 @@
----
 - src: Lowess.common
 - src: Lowess.libvirt
 - src: Lowess.nginx
