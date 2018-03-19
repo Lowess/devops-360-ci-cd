@@ -1,7 +1,0 @@
-- src: Lowess.common
-- src: Lowess.libvirt
-- src: Lowess.nginx
-- src: Lowess.ngrok
-- src: Lowess.docker
-- src: Lowess.drone
-
