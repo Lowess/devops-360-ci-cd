@@ -13,6 +13,9 @@
     - role: Lowess.common
       tags: ['common']
 
+    - role: Lowess.ngrok
+      tags: ['ngrok']
+
     - role: Lowess.docker
       tags: ['docker']
 
