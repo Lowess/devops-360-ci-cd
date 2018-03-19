@@ -1,0 +1,15 @@
+################################################################################
+# > Playbook used to provision VMs running with KVM/QEMU
+#
+# @author: Florian DAMBRINE <@Lowess>
+################################################################################
+---
+
+- name: Provision VMs
+  hosts: localhost
+  connection: local
+  become: yes
+
+  roles:
+    - Lowess.libvirt
+
