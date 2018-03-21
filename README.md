@@ -16,6 +16,6 @@ TODO
 TODO
 
 
-## 4. Stage 4 - Play and understand how CI / CD pipelines enhance a developement process
+## 4. Stage 4 - Play and understand how CI / CD pipelines enhance a development process
 
 TODO
