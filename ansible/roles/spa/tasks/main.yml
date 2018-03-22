@@ -1,2 +1,39 @@
 ---
 # tasks file for spa
+
+- name: Make sure the release folder exists
+  file:
+    state: directory
+    path: "{{ spa_root_folder }}"
+    owner: www-data
+    group: www-data
+
+- name: Download the SPA build from Github
+  unarchive:
+    src: "{{ spa_repo_url }}"
+    dest: "{{ spa_root_folder }}/{{ spa_version }}"
+    copy: no
+    owner: www-data
+    group: www-data
+    mode: '0744'
+
+- name: Symlink the current version
+  file:
+    state: link
+    src: "{{ spa_root_folder }}/{{ spa_version }}"
+    dest: "{{ spa_root_folder }}/spa"
+
+- name: Deploy the Nginx configuration
+  template:
+    src: spa-nginx.conf.j2
+    dest: /etc/nginx/sites-available/spa
+  notify:
+    - Reload Nginx
+
+- name: Symlink the Nginx configuration
+  file:
+    state: link
+    src: /etc/nginx/sites-available/spa
+    dest: /etc/nginx/sites-enabled/spa
+  notify:
+    - Reload Nginx

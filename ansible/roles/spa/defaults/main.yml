@@ -1,2 +1,6 @@
 ---
 # defaults file for spa
+
+spa_version: v0.0.8
+spa_repo_url: https://github.com/Lowess/devops-360-react/releases/download/{{ spa_version }}/build.tar.gz
+spa_root_folder: /opt/spa

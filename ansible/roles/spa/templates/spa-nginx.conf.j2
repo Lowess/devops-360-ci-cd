@@ -1,0 +1,9 @@
+server {
+  listen 80 default_server;
+  server_name _;
+  root {{ spa_root_folder }}/spa;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}
