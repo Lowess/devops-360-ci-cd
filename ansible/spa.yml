@@ -1,0 +1,23 @@
+################################################################################
+# > Playbook used to configure Drone CI CD server
+#
+# @author: Florian DAMBRINE <@Lowess>
+################################################################################
+---
+
+- name: Configure the WebSever to server the SPA
+  hosts: web
+  become: yes
+
+  roles:
+    - role: Lowess.common
+      tags: ['common']
+
+    - role: Lowess.ngrok
+      tags: ['ngrok']
+
+    - role: Lowess.nginx
+      tags: ['nginx']
+
+    - role: spa
+      tags: ['spa']

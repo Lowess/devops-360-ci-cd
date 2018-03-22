@@ -15,6 +15,10 @@ TODO
 
 TODO
 
+http://plugins.drone.io/
+
+http://plugins.drone.io/drone-plugins/drone-github-release/
+
 
 ## 4. Stage 4 - Play and understand how CI / CD pipelines enhance a development process
 
