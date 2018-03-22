@@ -4,7 +4,7 @@
 - name: Make sure the release folder exists
   file:
     state: directory
-    path: "{{ spa_root_folder }}"
+    path: "{{ spa_root_folder }}/{{ spa_version }}"
     owner: www-data
     group: www-data
 
