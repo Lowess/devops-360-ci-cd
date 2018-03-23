@@ -95,3 +95,9 @@ ENV/
 # Custom section
 ansible/vault-secret
 
+# Created by https://www.gitignore.io/api/ansible
+
+### Ansible ###
+*.retry
+
+# End of https://www.gitignore.io/api/ansible

@@ -1,0 +1,23 @@
+################################################################################
+# > Playbook used to setup a webserver serving the SPA
+#
+# @author: Florian DAMBRINE <@Lowess>
+################################################################################
+---
+
+- name: Configure the WebSever to run the SPA
+  hosts: web
+  become: yes
+
+  roles:
+    - role: Lowess.common
+      tags: ['common']
+
+    - role: Lowess.ngrok
+      tags: ['ngrok']
+
+    - role: Lowess.nginx
+      tags: ['nginx']
+
+- include: spa-deploy.yml
+
