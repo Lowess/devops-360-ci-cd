@@ -26,10 +26,19 @@ DevOps 360° CI / CD is an introduction to CI/CD with [Drone](http://drone.io/),
 
 * Run `ansible-galaxy install -r requirements.yml` in order to install role's dependencies from [Ansible Galaxy](https://galaxy.ansible.com/)
 
-*
-## 3. Stage 3 - Create the CI / CD pipeline with `.drone.yml`
+* Run the two following ansible playbooks:
+```sh
 
-TODO
+cd ansible
+
+# Setup the Drone CI CD server
+ansible-playbook inventories/vms drone.yml
+
+# Setup the Webserver running the SPA
+ansible-playbook inventories/vms spa.yml
+```
+
+## 3. Stage 3 - Create the CI / CD pipeline for [DevOps-360-react] app (https://github.com/Lowess/devops-360-react) using a `.drone.yml`
 
 http://plugins.drone.io/
 
