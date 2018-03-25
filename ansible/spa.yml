@@ -19,5 +19,5 @@
     - role: Lowess.nginx
       tags: ['nginx']
 
-- include: spa-deploy.yml
+- include: deploy.yml
 
