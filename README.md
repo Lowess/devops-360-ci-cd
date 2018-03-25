@@ -38,7 +38,7 @@ ansible-playbook inventories/vms drone.yml
 ansible-playbook inventories/vms spa.yml
 ```
 
-## 3. Stage 3 - Create the CI / CD pipeline for [DevOps-360-react] app (https://github.com/Lowess/devops-360-react) using a `.drone.yml`
+## 3. Stage 3 - Create the CI / CD pipeline for [DevOps-360-react app](https://github.com/Lowess/devops-360-react) using a `.drone.yml`
 
 http://plugins.drone.io/
 
