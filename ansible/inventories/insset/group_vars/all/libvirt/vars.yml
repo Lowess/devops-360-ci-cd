@@ -1,0 +1,11 @@
+---
+
+libvirt_vms:
+  drone:
+    cpu: 1
+    mem: 768
+    ip: "{{ libvirt_ip_prefix }}.66"
+  nodejs:
+    cpu: 1
+    mem: 768
+    ip: "{{ libvirt_ip_prefix }}.67"

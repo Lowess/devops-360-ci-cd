@@ -1,0 +1,12 @@
+---
+drone_admins:
+  - Lowess
+
+# Secrets stored in vault.yml
+drone_oauth_client: "{{ vault_drone_oauth_client }}"
+drone_oauth_secret: "{{ vault_drone_oauth_secret }}"
+
+# Not used by Ansible but by Drone server, kept here as a reference
+drone_github_token: "{{ vault_drone_github_token }}"
+drone_slack_webhook: "{{ vault_drone_slack_webhook }}"
+
