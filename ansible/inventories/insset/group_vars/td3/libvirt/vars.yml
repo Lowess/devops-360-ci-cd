@@ -5,3 +5,21 @@ libvirt_dns_zone: dell113.u13.org
 
 # Ip prefix used for newly created VMs
 libvirt_ip_prefix: '172.16.113'
+
+libvirt_vms:
+  g3.drone:
+    cpu: 1
+    mem: 768
+    ip: "{{ libvirt_ip_prefix }}.66"
+  g3.nodejs:
+    cpu: 1
+    mem: 768
+    ip: "{{ libvirt_ip_prefix }}.67"
+  g4.drone:
+    cpu: 1
+    mem: 768
+    ip: "{{ libvirt_ip_prefix }}.166"
+  g4.nodejs:
+    cpu: 1
+    mem: 768
+    ip: "{{ libvirt_ip_prefix }}.167"
