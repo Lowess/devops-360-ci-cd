@@ -68,12 +68,20 @@ td9
 [td1_web]
 172.16.111.67
 
+[td1:children]
+td1_drone
+td1_web
+
 ### td2
 [td2_drone]
 172.16.112.66
 
 [td2_web]
 172.16.112.67
+
+[td2:children]
+td2_drone
+td2_web
 
 ### td3
 [td3_drone]
@@ -82,12 +90,20 @@ td9
 [td3_web]
 172.16.113.67
 
+[td3:children]
+td3_drone
+td3_web
+
 ### td4
 [td4_drone]
 172.16.114.66
 
 [td4_web]
 172.16.114.67
+
+[td4:children]
+td4_drone
+td4_web
 
 ### td5
 [td5_drone]
@@ -96,12 +112,20 @@ td9
 [td5_web]
 172.16.115.67
 
-### td4
+[td5:children]
+td5_drone
+td5_web
+
+### td6
 [td6_drone]
 172.16.116.66
 
 [td6_web]
 172.16.116.67
+
+[td6:children]
+td6_drone
+td6_web
 
 ### td7
 [td7_drone]
@@ -110,6 +134,10 @@ td9
 [td7_web]
 172.16.117.67
 
+[td7:children]
+td7_drone
+td7_web
+
 ### td8
 [td8_drone]
 172.16.113.166
@@ -117,12 +145,20 @@ td9
 [td8_web]
 172.16.113.167
 
+[td8:children]
+td8_drone
+td8_web
+
 ### td9
 [td9_drone]
 172.16.119.66
 
 [td9_web]
 172.16.119.67
+
+[td9:children]
+td9_drone
+td9_web
 
 [drone:children]
 td1_drone
