@@ -1,0 +1,13 @@
+################################################################################
+# > Playbook used to configure apache2 as a reverse proxy for Stundents servers
+#
+# @author: Florian DAMBRINE <@Lowess>
+################################################################################
+---
+
+- name: Configure Apache2 as a reverse proxy for Drone CI
+  hosts: all
+  become: yes
+
+  roles:
+    - role: apache2-proxy

@@ -1,0 +1,17 @@
+---
+# tasks file for apache2-proxy
+
+- name: Deploy Apache2 configuration to proxy to Drone
+  template:
+    src: apache2-proxy.conf.j2
+    dest: /etc/httpd/sites-available/{{ drone_host }}.conf
+
+- name: Symlink Apache2 proxy configuration
+  template:
+    src: /etc/httpd/sites-available/{{ drone_host }}.conf
+    dest: /etc/httpd/sites-enabled/000-{{ drone_host }}.conf
+
+- name: Reload Apache2
+  service:
+    state: reloaded
+    name: httpd

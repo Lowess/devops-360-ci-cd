@@ -1,0 +1,8 @@
+<VirtualHost *:80>
+        ServerName {{ drone_host }}
+        ProxyRequests Off
+        ProxyPassReverse / http://drone.{{ libvirt_dns_zone }}/
+        ProxyPass / http://drone.{{ libvirt_dns_zone }}/
+        RequestHeader set Host "{{ drone_host }}"
+        ProxyPreserveHost On
+</VirtualHost>
