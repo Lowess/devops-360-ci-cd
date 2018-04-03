@@ -36,23 +36,38 @@ DevOps 360° CI / CD is an introduction to CI/CD with [Drone](http://drone.io/),
 
 * Create a group_vars override in `ansible/inventories/vms/group_vars/drone/drone/vars.yml` to override multiple Drone settings:
 
-```
-drone_oauth_client: <GitHub OAuth Client>
-drone_oauth_secret: <GitHub OAuth Scret>
-drone_host: tp1XX.ccm.u13.org
+> :point_up: Note that sensible data should be encrypted using `ansible-vault`. A good practice is to create a `ansible/inventories/vms/group_vars/drone/drone/vault.yml` file along side with your `vars.yml` files:
+
+```yml
+---
+# vars.yml
+
+drone_host: tp110.ccm.u13.org
 drone_admins:
-  - <Github Username 1>
-  - <Github Username 2>
+  - Lowess
+
+# Secrets stored in vault.yml
+drone_oauth_client: "{{ vault_drone_oauth_client }}"
+drone_oauth_secret: "{{ vault_drone_oauth_secret }}"
 ```
 
-* Run the following ansible playbook to setup Drone:
+
+```yml
+---
+# vault.yml
+
+vault_drone_oauth_client: <GitHub OAuth Client>
+vault_drone_oauth_secret: <GitHub OAuth Scret>
+```
+
+* Run the following ansible playbook to setup Drone (Note that if you used `ansible-vault` to encrypt secrets you will need to add `--vault-password-file <path-to-vault-file>` to your command):
 
 ```sh
 
 cd ansible
 
 # Setup the Drone CI CD server
-ansible-playbook inventories/vms drone.yml
+ansible-playbook -i inventories/vms drone.yml
 ```
 
 #### 2.2.2. Webserver SPA
@@ -63,7 +78,7 @@ ansible-playbook inventories/vms drone.yml
 
 ```
 # Setup the Webserver running the SPA
-ansible-playbook inventories/vms spa.yml
+ansible-playbook -i inventories/vms spa.yml
 ```
 
 
