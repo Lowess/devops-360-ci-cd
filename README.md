@@ -34,7 +34,7 @@ DevOps 360° CI / CD is an introduction to CI/CD with [Drone](http://drone.io/),
 
 * Run `ansible-galaxy install -r requirements.yml` in order to install role's dependencies from [Ansible Galaxy](https://galaxy.ansible.com/)
 
-* Create a `group_vars` override in `ansible/inventories/vms/group_vars/drone/drone/vars.yml` to point the automation to your own [DevOps-360-react app](https://
+* Create a group_vars override in `ansible/inventories/vms/group_vars/drone/drone/vars.yml` to override multiple Drone settings:
 
 ```
 drone_oauth_client: <GitHub OAuth Client>
