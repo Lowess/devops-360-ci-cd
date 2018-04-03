@@ -52,7 +52,7 @@ drone_admins:
 cd ansible
 
 # Setup the Drone CI CD server
-ansible-playbook inventories/vms drone.yml
+ansible-playbook -i inventories/vms drone.yml
 ```
 
 #### 2.2.2. Webserver SPA
@@ -63,7 +63,7 @@ ansible-playbook inventories/vms drone.yml
 
 ```
 # Setup the Webserver running the SPA
-ansible-playbook inventories/vms spa.yml
+ansible-playbook -i inventories/vms spa.yml
 ```
 
 
