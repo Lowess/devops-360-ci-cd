@@ -6,7 +6,7 @@
 ---
 
 - name: Deploy the SPA on a WebSever
-  hosts: web
+  hosts: spa
   become: yes
 
   roles:

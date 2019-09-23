@@ -4,9 +4,10 @@
 # @author: Florian DAMBRINE <@Lowess>
 ################################################################################
 ---
+- include: python.yml
 
 - name: Configure the WebSever to run the SPA
-  hosts: web
+  hosts: spa
   become: yes
 
   roles:

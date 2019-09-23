@@ -1,0 +1,17 @@
+################################################################################
+# > Playbook used to install python2 on freshly bootstrapped EC2
+#
+# @author: Florian DAMBRINE <@Lowess>
+################################################################################
+---
+- name: Pre-step
+  hosts: spa
+  become: true
+  gather_facts: no
+  pre_tasks:
+    - name: Install Python 2
+      raw: bash -c "test -e /usr/bin/python || (apt -qqy update && apt install -qqy python-minimal)"
+      register: __python2_requirement
+      changed_when: __python2_requirement.stdout != ""
+      tags:
+        - always

@@ -1,2 +1,10 @@
-[web]
-ec2-18-208-212-211.compute-1.amazonaws.com
+[tag_Name_react-1a]
+
+[tag_Name_react-1b]
+
+[tag_Name_react-1c]
+
+[spa:children]
+tag_Name_react-1a
+tag_Name_react-1b
+tag_Name_react-1c
