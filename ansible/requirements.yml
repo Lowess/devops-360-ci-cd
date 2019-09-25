@@ -3,6 +3,7 @@
 - name: Lowess.libvirt
 - name: Lowess.nginx
 - name: Lowess.ngrok
+- name: Lowess.netdata
 - name: Lowess.docker
 - name: Lowess.drone
 
