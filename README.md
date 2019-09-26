@@ -44,8 +44,12 @@ Visit [Drone Cloud](cloud.drone.io) and click on `Login`
 * Create a `.drone.yml` file under the root of the [DevOps-360-react app](https://github.com/Lowess/devops-360-react) with the following content:
 
 ```yml
-pipeline:
-  echo:
+---
+kind: pipeline
+name: react-ci-cd
+
+steps:
+  - name: echo
     image: node:alpine
     commands:
       - echo 'Run CI / CD Pipeline on Drone'
